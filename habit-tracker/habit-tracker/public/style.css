@@ -1,0 +1,177 @@
+:root {
+  --bg: #0f1115;
+  --card: #1a1d24;
+  --text: #eef0f3;
+  --muted: #8a8f98;
+  --accent: #ff7a45;
+  --accent-soft: rgba(255, 122, 69, 0.15);
+  --success: #4ade80;
+  --danger: #f87171;
+  --radius: 14px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 40px 16px;
+}
+
+.container {
+  width: 100%;
+  max-width: 520px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+h1 {
+  margin: 0 0 6px;
+  font-size: 28px;
+}
+
+.subtitle {
+  color: var(--muted);
+  margin: 0;
+  font-size: 14px;
+}
+
+#habit-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+#habit-input {
+  flex: 1;
+  padding: 12px 14px;
+  border-radius: var(--radius);
+  border: 1px solid #2a2e37;
+  background: var(--card);
+  color: var(--text);
+  font-size: 15px;
+  outline: none;
+}
+
+#habit-input:focus {
+  border-color: var(--accent);
+}
+
+#habit-form button {
+  padding: 12px 18px;
+  border-radius: var(--radius);
+  border: none;
+  background: var(--accent);
+  color: #1a1000;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 15px;
+  transition: opacity 0.15s ease;
+}
+
+#habit-form button:hover {
+  opacity: 0.9;
+}
+
+#habit-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.habit-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  border: 1px solid #22252d;
+}
+
+.habit-item.done {
+  border-color: var(--success);
+}
+
+.habit-check {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 2px solid var(--muted);
+  background: transparent;
+  cursor: pointer;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: transparent;
+  font-size: 14px;
+  transition: all 0.15s ease;
+}
+
+.habit-item.done .habit-check {
+  background: var(--success);
+  border-color: var(--success);
+  color: #0f1115;
+}
+
+.habit-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.habit-name {
+  font-size: 15px;
+  margin: 0 0 2px;
+  word-break: break-word;
+}
+
+.habit-item.done .habit-name {
+  color: var(--muted);
+  text-decoration: line-through;
+}
+
+.habit-streak {
+  font-size: 12px;
+  color: var(--accent);
+  background: var(--accent-soft);
+  padding: 2px 8px;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+.habit-delete {
+  background: none;
+  border: none;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 18px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.habit-delete:hover {
+  color: var(--danger);
+  background: rgba(248, 113, 113, 0.1);
+}
+
+.empty-state {
+  text-align: center;
+  color: var(--muted);
+  margin-top: 32px;
+  font-size: 14px;
+}

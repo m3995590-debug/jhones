@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Habit Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🔥 Habit Tracker</h1>
+      <p class="subtitle">Marque seus hábitos diários e mantenha sua sequência viva.</p>
+    </header>
+
+    <form id="habit-form">
+      <input
+        type="text"
+        id="habit-input"
+        placeholder="Ex: Beber 2L de água"
+        autocomplete="off"
+        required
+      />
+      <button type="submit">Adicionar</button>
+    </form>
+
+    <ul id="habit-list"></ul>
+
+    <p id="empty-state" class="empty-state" hidden>
+      Nenhum hábito ainda. Adicione o primeiro acima! ☝️
+    </p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
